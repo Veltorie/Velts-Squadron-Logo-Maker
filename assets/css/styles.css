@@ -1,0 +1,439 @@
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    /* FGS */
+
+    --orange-color-1: #F57400;
+    /*Chilean Fire*/
+    --orange-color-2: #DB6600;
+    /*shade*/
+    --orange-color-3: #DE4F0B;
+    /*analogous*/
+    --orange-color-4: #5C2B00;
+    /*shade color-1 > drker shade*/
+    --orange-color-5: #FF8519;
+    /*complementary*/
+    --orange-color-6: #FEBE14;
+    /*Lightning Yellow*/
+    --orange-color-7: #C4450A;
+    /*shade of orange-color-3*/
+    --orange-color-8: #B55400;
+    /*shade of orange-color-1*/
+
+    --red-color-1: #FF1443;
+    --red-color-2: #800A22;
+    --red-color-3: #CC1036;
+    /*color for "War" faction state*/
+    /*color for "Pirate Attack" faction state*/
+
+    --black-color-1: #141415;
+    /*Main background dark mode color*/
+    --black-color-2: #241c26;
+    --black-color-3: #333;
+    --black-color-4: #4D4D4D;
+    --black-color-5: #BFBFBF;
+    --black-color-6: #212121;
+    --black-color-7: #2B3A48;
+    --black-color-8: #324454;
+    /*Shade of black-color-7*/
+    --black-color-9: #949494;
+
+    --white-color-1: #f0f0f0;
+
+    --green-color-1: #3DD48E;
+    --green-color-2: #0A6944;
+    /*Shade of green-color-3*/
+    --green-color-3: #11A86F;
+    /*Split comp. of orange-color-1*/
+    --green-color-4: #21DE60;
+    /*Doub split comp. from orange-color-3*/
+    --green-color-5: #158F1E;
+    /*square from blue-color-1 (#86FF14) -> compound -> (#25CC42) -> monochromatic*/
+    /*color for "Boom" faction state*/
+    --green-color-6: #127518;
+    /*shades of green-color-5*/
+
+    --yellow-color-1: #F5B00C;
+    /*doub split comp. from orange-color-1*/
+    --yellow-color-2: #FEBE14;
+    /*Lightning Yellow*/
+    /*color for "Drought" faction state*/
+    --yellow-color-3: #DB9D0B;
+    /*analogous from yellow-color-1*/
+    --yellow-color-4: #E6AD12;
+    /*shades from yellow-color-2*/
+
+    --blue-color-1: #00CAF5;
+    /*comp. from orange-color-1*/
+    --blue-color-2: #236675;
+    /*Monochromatic from blue-color-1*/
+    --blue-color-3: #009EC2;
+    /*Shade from blue-color-1*/
+    --blue-color-4: #0C50F5;
+    /*doub split comp. from blue-color-1*/
+    /*color for "Expansion" faction state*/
+
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    /*color for "None" faction state*/
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: var(--bs-blue);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: var(--black-color-6);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+    /*========== Font and typography ==========*/
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Michroma;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+.container {
+  width: 1200px;
+  height: 800px;
+  border: 5px solid var(--bs-cyan);
+  position: absolute;
+  border-radius: 40px;
+  top: 520px;
+  left: 62%;
+  z-index: var(--z-fixed);
+  transform: translate(-50%, -50%);
+  background-color: var(--black-color-3);
+}
+
+.subcontainer {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  z-index: var(--z-fixed);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 400px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 5px solid var(--bs-cyan);
+  position: fixed;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--z-fixed);
+  background-color: var(--black-color-3);
+}
+
+/*==================== NAV ====================*/
+
+
+/* show menu */
+
+
+/* Active link */
+
+
+/* Change background header */
+
+
+/*==================== HOME ====================*/
+
+
+/*==================== BUTTONS ====================*/
+
+
+.button {
+  position: fixed;
+  background-color: #233635;
+  border: none;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/*==================== BUTTON 1 ====================*/
+
+.buttoncolor {
+  position: relative;
+  background-color: #FFFFFF;
+  border: none;
+  top:10px;
+  left:12px;
+  width: 47px;
+  text-align: center;
+  padding-top: 53px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.buttoncolor:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.buttoncolor:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/*==================== BUTTON 2 ====================*/
+
+.buttonimage {
+  position: relative;
+  background-color: #233635;
+  border: none;
+  top:10px;
+  left:11px;
+  align-items: baseline;
+  width: 90px;
+  text-align: top;
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  background-position: center;
+  padding-top: 90px;
+  padding-bottom: 0px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.buttonimage:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.buttonimage:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/*==================== ABOUT ====================*/
+
+
+/*==================== SKILLS ====================*/
+
+
+/*==================== QUALIFICATION ====================*/
+
+
+/*==================== SERVICES ====================*/
+
+
+/* Active Modal */
+
+
+/*==================== PORTFOLIO ====================*/
+
+
+/*==================== PROJECT IN MIND ====================*/
+
+
+/*==================== TESTIMONIAL ====================*/
+
+
+/*==================== CONTACT ME ====================*/
+
+
+/*==================== FOOTER ====================*/
+
+
+/*========== SCROLL UP ==========*/
+
+
+/* Show scroll */
+
+
+/*========== SCROLL BAR ==========*/
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
