@@ -728,7 +728,7 @@ a {
         /*==================== const ====================*/
 var logosetting = 'LOGOBACKGROUND';
 var colourselected = [255,255,255];
-var logoset = "0" ;
+var logoset = "notpicked" ;
 var LOGOBACKGROUND         = "0" ;
 var LOGOBACKGROUNDCOLOUR   = [255,255,255] ;
 var LOGOMIDDLEGROUND       = "0" ;
@@ -787,6 +787,7 @@ async function updatecanvas() {
     c2nd.getContext("2d").putImageData(imgData, 0, 0);
 }
 
+updatecanvas()
         </script>
     </body>
 </html>
