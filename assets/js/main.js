@@ -39,7 +39,7 @@ async function updatecanvas() {
         LOGOFORGROUND = logoset;
         LOGOFORGROUNDCOLOUR = colourselected;
     }
-    document.getElementById("LOGOSETTING").src = `/assets/img/${logoset}.png`;
+    document.getElementById("LOGOSETTING").src = `https://github.com/Veltorie/Velts-Squadron-Logo-Maker/blob/main/assets/img/${logoset}.png?raw=true`;
     const c = document.getElementById(logosetting);
     const c2nd = document.getElementById(`${logosetting}FINAL`);
     const ctx = c.getContext("2d");
