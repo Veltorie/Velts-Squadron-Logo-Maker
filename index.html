@@ -766,14 +766,17 @@ async function updatecanvas() {
         LOGOFORGROUND = logoset;
         LOGOFORGROUNDCOLOUR = colourselected;
     }
-    document.getElementById("LOGOSETTING").src = `https://github.com/Veltorie/Velts-Squadron-Logo-Maker/blob/main/assets/img/${logoset}.png?raw=true`;
+    const image = document.getElementById("LOGOSETTING");
+    image.crossOrigin = "anonymous";
+    image.src = `https://github.com/Veltorie/Velts-Squadron-Logo-Maker/blob/main/assets/img/${logoset}.png?raw=true`;
     const c = document.getElementById(logosetting);
     const c2nd = document.getElementById(`${logosetting}FINAL`);
     const ctx = c.getContext("2d");
     await sleep(50);
     ctx.clearRect(0, 0, c.width, c.height);
-    ctx.drawImage(document.getElementById("LOGOSETTING"), 0, 0);
+    ctx.drawImage(image, 0, 0);
     const imgData = ctx.getImageData(0, 0, c.width, c.height);
+
 
     for (let i = 0; i < imgData.data.length; i += 4) {
         imgData.data[i] = colourselected[0];
