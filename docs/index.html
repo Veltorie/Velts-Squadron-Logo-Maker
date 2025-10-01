@@ -699,14 +699,14 @@ a {
                 <section id="options" class="subcontainer" style="top: 0px;left: 0px;width: 692px;height: 61%;border: none;">
                     <img id="LOGOSETTING" width="135" height="135" src="/Velts-Squadron-Logo-Maker/assets/img/0.png" style="position:fixed;top: -1500%;left: -1500%;">
                     <button class="button" style="top: 30px;left: 1.3%;width: 660px;height: 135px;border: none;" onclick="switchgrounding('LOGOBACKGROUND');">LOGO BACKGROUND</button>
-                    <canvas id="LOGOBACKGROUND" width="135" height="135" style="position:fixed;top: 30px;left: 3%;border:none;"></canvas>
                     <button class="button" style="top: 179px;left: 1.3%;width: 660px;height: 135px;border: none;" onclick="switchgrounding('LOGOMIDDLEGROUND');">LOGO MIDDLEGROUND</button>
                     <button class="buttoncancel" style="top: 191px;left: 47%;border: none;" onclick="const temp = logosetting;switchgrounding('LOGOMIDDLEGROUND');logoset = '0';updatecanvas();switchgrounding(temp);">
-                    <canvas id="LOGOMIDDLEGROUND" width="135" height="135" style="position:fixed;top: 179px;left: 3%;border:none;"></canvas>
                     <button class="button" style="top: 328px;left: 1.3%;width: 660px;height: 135px;border: none;" onclick="switchgrounding('LOGOFORGROUND');">LOGO FORGROUND</button>
                     <button class="buttoncancel" style="top: 340px;left: 47%;border: none;" onclick="const temp = logosetting;switchgrounding('LOGOFORGROUND');logoset = '0';updatecanvas();switchgrounding(temp);">
-                    <canvas id="LOGOFORGROUND" width="135" height="135" style="position:fixed;top: 328px;left: 3%;border:none;"></canvas>
                 </section>
+                <canvas id="LOGOBACKGROUND" width="135" height="135" style="z-index: var(--z-modal);position:fixed;top: 30px;left: 3%;border:none;"></canvas>
+                <canvas id="LOGOMIDDLEGROUND" width="135" height="135" style="z-index: var(--z-modal);position:fixed;top: 179px;left: 3%;border:none;"></canvas>
+                <canvas id="LOGOFORGROUND" width="135" height="135" style="z-index: var(--z-modal);position:fixed;top: 328px;left: 3%;border:none;"></canvas>
 
                 <!--==================== Final Icon ====================-->
                 <section class="container" id="final" style="background-image: url('/Velts-Squadron-Logo-Maker/assets/img/main.png');height: 300px; width: 300px; left: -320px;top: 11%;border-radius: 50%;border: 5px solid var(--bs-cyan);transform: translate(0%, 0%);">
@@ -727,14 +727,14 @@ a {
         <script>
         /*==================== const ====================*/
 var logosetting = 'LOGOBACKGROUND';
-var colourselected = [51,51,51];
+var colourselected = [255,255,255];
 var logoset = "0" ;
 var LOGOBACKGROUND         = "0" ;
-var LOGOBACKGROUNDCOLOUR   = [51,51,51] ;
+var LOGOBACKGROUNDCOLOUR   = [255,255,255] ;
 var LOGOMIDDLEGROUND       = "0" ;
-var LOGOMIDDLEGROUNDCOLOUR = [51,51,51] ;
+var LOGOMIDDLEGROUNDCOLOUR = [255,255,255] ;
 var LOGOFORGROUND          = "0" ;
-var LOGOFORGROUNDCOLOUR    = [51,51,51] ;
+var LOGOFORGROUNDCOLOUR    = [255,255,255] ;
 
 /*===== Functions =====*/
 function sleep(ms) {
